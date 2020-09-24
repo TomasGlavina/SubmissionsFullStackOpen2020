@@ -1,0 +1,14 @@
+title Excercie 0.6 New note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+note over server:
+server processes the JSON- data 
+the JavaScript code fetched from server
+starts to run with an event handler
+e.preventDefault() prevents a new GET request
+and adds it to the array called notes
+with the notes.push(note)
+end note
+
+server-->browser: JSON data
