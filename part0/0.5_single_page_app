@@ -1,12 +1,21 @@
-title Excercie 0.4 new note
+title Excercie 0.5 single app page
 
-browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
-note over server:
-server processes the JSON- data 
-the JavaScript code fetched from server
-starts to run with an event handler
-e.preventDefault() prevents a new GET request
-and adds it to the array called notes
-with the notes.push(note)
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+
+note over browser:
+browser executes spa.js
+which requests JSON data
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: data.json
+
+note over browser:
+broser deals with event handler
+that renders note to display 
+like traditional example
 end note
-server-->browser: JSON data
